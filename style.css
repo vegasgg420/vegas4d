@@ -1,0 +1,230 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:focus{outline:0}
+::-webkit-scrollbar{display:none}
+
+html,body{
+  background:#000;
+  color:#fff;
+  font-family:'Noto Sans', Arial, sans-serif;
+}
+
+a{text-decoration:none;color:#fff}
+
+.header-utils {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 6px;
+    z-index: 999999;
+}
+
+.util-btn {
+    width: 10px;
+    height: 10px;
+    opacity: 100;
+    background: #000;
+    display: block;
+    cursor: pointer;
+}
+
+.util-btn:hover,
+.util-btn:active,
+.util-btn:focus {
+    opacity: 0.05;
+}
+
+
+main{
+  max-width:500px;
+  margin:0 auto;
+  padding:16px;
+}
+
+.spacer{height:12px}
+
+.block-img{
+  position:relative;
+  margin:16px auto 20px;
+  min-width:100px;
+  background:linear-gradient(0deg,#000,#272727);
+  border-radius:10px;
+  overflow:hidden;
+}
+.block-img::before,
+.block-img::after{
+  content:"";
+  position:absolute;
+  right:-3px;
+  bottom:-3px;
+  width:calc(100% + 6px);
+  height:calc(100% + 6px);
+  z-index:-1;
+  background:linear-gradient(90deg, #871737 0, #1f4181 49%, #871737);
+  background-size:400%;
+  animation:steam 5s linear infinite;
+  border-radius:12px;
+}
+.block-img::after{ filter: blur(50px); }
+
+.banner{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:10px;
+}
+
+.login-btn {
+  display:grid;
+  gap:14px;
+  margin-bottom:20px;
+}
+
+.block{
+  position:relative;
+  padding:12px 10px;
+  text-align:center;
+  background:linear-gradient(0deg,#000,#272727);
+  color:#fff;
+  border-radius:10px;
+  cursor:pointer;
+  letter-spacing:.3px;
+  font-weight:700;
+  overflow:hidden;
+  z-index:1;
+}
+
+.block::before,
+.block::after{
+  content:"";
+  position:absolute;
+  right:-3px;
+  bottom:-3px;
+  width:calc(100% + 6px);
+  height:calc(100% + 6px);
+  z-index:-1;
+  background-size:300% 300%;
+  animation:glowBorder 4s linear infinite;
+  border-radius:12px;
+}
+
+.block::after{ filter:blur(30px); }
+
+.btn-daftar{
+  background:#0044cc;
+  animation: pulseScale 1.6s ease-in-out infinite;
+}
+.btn-daftar::before,
+.btn-daftar::after{
+  background:linear-gradient(90deg,#00f,#0ff,#00f);
+}
+
+.btn-login{
+  background:#008c3a;
+}
+.btn-login::before,
+.btn-login::after{
+  background:linear-gradient(90deg,#00ff99,#00cc66,#00ff99);
+}
+
+@keyframes glowBorder{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.block{
+  position:relative;
+  padding:12px 10px;
+  text-align:center;
+  background:linear-gradient(0deg,#000,#272727);
+  color:#fff;
+  border-radius:10px;
+  cursor:pointer;
+  letter-spacing:.3px;
+  font-weight:700;
+}
+.block::before,
+.block::after{
+  content:"";
+  position:absolute;
+  right:-3px;
+  bottom:-3px;
+  width:calc(100% + 6px);
+  height:calc(100% + 6px);
+  z-index:-1;
+  background:linear-gradient(90deg,#471525,#13162f);
+  background-size:400%;
+  animation:steam 5s linear infinite;
+  border-radius:12px;
+}
+.block::after{ filter:blur(50px); }
+
+.artikel{
+  text-align:justify;
+  margin-top:10px;
+}
+.artikel h1,
+.artikel h2{
+  color:#66ccff;
+  text-align:center;
+  margin:8px 0;
+}
+.artikel p{ margin:22px 0; }
+.artikel a{ color:#66ccff; }
+
+.footer{
+  text-align:center;
+  margin:16px 0 24px;
+}
+.footer a{ color:#66ccff }
+
+.divider{
+  border:0;
+  height:1px;
+  background:linear-gradient(90deg, transparent, #333, transparent);
+  margin:16px 0;
+}
+
+*{
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:-moz-none;
+  -o-user-select:none;
+  user-select:none;
+}
+
+.badababi{ background-color:transparent; border:none; }
+.siji{ margin-left:35%; margin-right:5%; }
+.loro{ margin-right:5%; }
+@media (max-width:768px){
+  .siji{ margin-left:32%; }
+}
+
+@keyframes steam{
+  0%{background-position:0 0}
+  50%{background-position:400% 0}
+  100%{background-position:0 0}
+}
+
+@keyframes pulseScale {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.btn-promo {
+    animation: pulseScale 1.6s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+#verifikasi {
+    background: url('/images/vegas4d_promosi.webp') center/cover no-repeat;
+}
+
+@media (max-width: 768px) {
+    #verifikasi {
+        background: url('/images/vegas4d_mob_promosi.webp') center/cover no-repeat;
+    }
+}
+
